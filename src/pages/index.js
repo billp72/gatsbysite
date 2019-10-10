@@ -27,8 +27,11 @@ const largeImg = {
     backgroundColor: 'black'
 }
 const comparisonImg = {
-    float:'right',
-    margin:'-59px 0px 0 0'
+    float:'left',
+    margin:'-60px 0px 0 30%'
+}
+const links = {
+    float:'left'
 }
 const HomePage = () => (
   <StaticQuery
@@ -81,12 +84,14 @@ const HomePage = () => (
           <p>{contentp}&nbsp;<a target="_blank" rel="noopener noreferrer" href={links.link4}>Gatsby</a></p>
           </section>
           <section>
-            <a target="_blank" rel="noopener noreferrer" href={links.link1}>Stackoverfollow</a><br />
-            <a target="_blank" rel="noopener noreferrer" href={links.link2}>Github</a>
+            <div style={links}>
+              <a target="_blank" rel="noopener noreferrer" href={links.link1}>Stackoverfollow</a><br />
+              <a target="_blank" rel="noopener noreferrer" href={links.link2}>Github</a>
+              <small style={dt}>Created on: <Moment>{date}</Moment></small>
+            </div>
             <div style={comparisonImg}>
               <img alt="CMS Comparison" src={images[2].file.url} />
             </div>
-            <small style={dt}>Created on: <Moment>{date}</Moment></small>
           </section>
       </div>
       </>
