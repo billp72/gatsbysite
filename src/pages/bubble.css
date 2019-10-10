@@ -28,3 +28,28 @@ html, body {
     margin-left: -25px;
     margin-bottom: -35px;
 }
+:global .largeImg {
+    width: 950px;
+    display: block;
+    float: left;
+    background-color: black;
+    margin: -9% 0 0 25%;
+}
+@media (max-width: 1326px) {
+ 
+    :global .speechBubble {
+        margin-bottom: 130px;
+    }
+    :global .largeImg img {
+        width:777px;
+    }
+    :global .largeImg {
+        width:777px;
+        margin: -20% 0 0 30%;
+    }
+}
+@media (max-width: 1300px) {
+    :global .largeImg {
+        display: none;
+     }
+}

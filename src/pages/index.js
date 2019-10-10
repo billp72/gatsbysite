@@ -15,14 +15,6 @@ const container = {
     display: 'flex',
     flexDirection:'column'
 }
-const largeImg = {
-    width: '950px',
-    display:'block',
-    float: 'left',
-    backgroundColor: 'black',
-    margin:'-9% 0 0 25%'
-}
-
 const linkscont = {
     width:'100%',
     marginLeft:'44%'
@@ -75,7 +67,7 @@ const HomePage = () => (
             <h1>{title}</h1>
             <img style={imageStyle} alt="Rodney Dangerfield from Back to School" src={images[1].file.url} />
           </hgroup> 
-          <div style={largeImg}>
+          <div className={'largeImg'}>
             <img alt="just random code" src={images[0].file.url} />
           </div>
           </section>
