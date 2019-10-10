@@ -1,0 +1,25 @@
+:global .speechBubble {
+	position: relative;
+    background: black;
+    border-radius: 6em;
+    width: 300px;
+    height: 90px;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+
+:global .speechBubble:after {
+	content: '';
+    position: absolute;
+    bottom: 0;
+    left: 65%;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: black;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -25px;
+    margin-bottom: -35px;
+}
