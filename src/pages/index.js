@@ -5,7 +5,7 @@ import './bubble.css';
 
 const imageStyle = {
     width: '300px',
-    marginTop: '20px'
+    marginTop: '12%'
 }
 const container = {
     width: '85%',
@@ -15,23 +15,21 @@ const container = {
     display: 'flex',
     flexDirection:'column'
 }
-const dt = {
-    display:'BLOCK',
-    margin: '10px 0 0px 3px'
-}
 const largeImg = {
     width: '950px',
-    height: '255px',
-    marginTop:'-110px',
-    float: 'right',
-    backgroundColor: 'black'
+    display:'block',
+    float: 'left',
+    backgroundColor: 'black',
+    margin:'-9% 0 0 25%'
 }
-const comparisonImg = {
-    float:'left',
-    margin:'-60px 0px 0 30%'
+
+const linkscont = {
+    width:'100%',
+    marginLeft:'44%'
 }
-const links = {
-    float:'left'
+const dateTime = {
+    width:'200px',
+    textAlign:'center'
 }
 const HomePage = () => (
   <StaticQuery
@@ -75,22 +73,26 @@ const HomePage = () => (
         <section>
           <hgroup className={'speechBubble'}>
             <h1>{title}</h1>
-          </hgroup>
-          <img style={imageStyle} alt="Rodney Dangerfield from Back to School" src={images[1].file.url} />
+            <img style={imageStyle} alt="Rodney Dangerfield from Back to School" src={images[1].file.url} />
+          </hgroup> 
           <div style={largeImg}>
             <img alt="just random code" src={images[0].file.url} />
           </div>
+          </section>
+          <section>
           <p>{about}&nbsp;<a target="_blank" rel="noopener noreferrer" href={links.link3}>Contentful</a></p>
           <p>{contentp}&nbsp;<a target="_blank" rel="noopener noreferrer" href={links.link4}>Gatsby</a></p>
           </section>
           <section>
-            <div style={links}>
-              <a target="_blank" rel="noopener noreferrer" href={links.link1}>Stackoverfollow</a><br />
-              <a target="_blank" rel="noopener noreferrer" href={links.link2}>Github</a>
-              <small style={dt}>Created on: <Moment>{date}</Moment></small>
-            </div>
-            <div style={comparisonImg}>
+            <div>
               <img alt="CMS Comparison" src={images[2].file.url} />
+            </div>
+            <div style={linkscont}>
+              <div style={dateTime}>
+                <a target="_blank" rel="noopener noreferrer" href={links.link1}>Stackoverfollow</a><br />
+                <a target="_blank" rel="noopener noreferrer" href={links.link2}>Github</a><br /><br />
+                <small>Created on: <Moment>{date}</Moment></small>
+              </div>
             </div>
           </section>
       </div>
