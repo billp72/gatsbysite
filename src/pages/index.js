@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from 'react-markdown';
 import { StaticQuery, graphql } from "gatsby";
 import Moment from 'react-moment';
 import './bubble.css';
@@ -47,6 +48,9 @@ const HomePage = () => (
           contentp {
               contentp
           }
+          drawback {
+              drawback
+          }
         }
       }
     `}
@@ -57,7 +61,8 @@ const HomePage = () => (
         images,
         links,
         about: { about },
-        contentp: {contentp}
+        contentp: {contentp},
+        drawback: {drawback}
       }
     }) => (
       <>
@@ -74,6 +79,9 @@ const HomePage = () => (
           <section>
           <p>{about}&nbsp;<a target="_blank" rel="noopener noreferrer" href={links.link3}>Contentful</a></p>
           <p>{contentp}&nbsp;<a target="_blank" rel="noopener noreferrer" href={links.link4}>Gatsby</a></p>
+          <ReactMarkdown
+           source={drawback}
+          />
           </section>
           <section>
             <div>
