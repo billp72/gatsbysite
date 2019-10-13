@@ -92,7 +92,7 @@ const HomePage = () => (
               <div style={dateTime}>
                 <a target="_blank" rel="noopener noreferrer" href={links.link1}>Stackoverflow</a><br />
                 <a target="_blank" rel="noopener noreferrer" href={links.link2}>Github</a><br /><br />
-                <small>Created on: <Moment>{date}</Moment></small>
+                <small>By Bill Pope: <Moment>{date}</Moment></small>
               </div>
             </div>
           </section>
