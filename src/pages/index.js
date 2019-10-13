@@ -77,11 +77,12 @@ const HomePage = () => (
           </div>
           </section>
           <section>
-          <p>
           <ReactMarkdown
              source={about}
-          /><a target="_blank" rel="noopener noreferrer" href={links.link3}>Contentful</a></p>
-          <p>{contentp}&nbsp;<a target="_blank" rel="noopener noreferrer" href={links.link4}>Gatsby</a></p>
+          />
+          <p>{contentp}</p>
+          <a target="_blank" rel="noopener noreferrer" href={links.link4}>Gatsby</a><br />
+          <a target="_blank" rel="noopener noreferrer" href={links.link3}>Contentful</a>
           <ReactMarkdown
              source={drawback}
           />
