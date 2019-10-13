@@ -1,5 +1,5 @@
 import React from "react";
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown/with-html';
 import { StaticQuery, graphql } from "gatsby";
 import Moment from 'react-moment';
 import './bubble.css';
@@ -78,6 +78,7 @@ const HomePage = () => (
           <section>
           <ReactMarkdown
              source={about}
+             escapeHtml={false}
           />
           <p>{contentp}</p>
           <a target="_blank" rel="noopener noreferrer" href={links.link4}>Gatsby</a><br />
