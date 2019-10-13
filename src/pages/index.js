@@ -83,9 +83,6 @@ const HomePage = () => (
           <p>{contentp}</p>
           <a target="_blank" rel="noopener noreferrer" href={links.link4}>Gatsby</a><br />
           <a target="_blank" rel="noopener noreferrer" href={links.link3}>Contentful</a>
-          <ReactMarkdown
-             source={drawback}
-          />
           </section>
           <section>
             <div>
