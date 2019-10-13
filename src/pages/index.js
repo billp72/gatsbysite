@@ -4,6 +4,9 @@ import { StaticQuery, graphql } from "gatsby";
 import Moment from 'react-moment';
 import './bubble.css';
 
+const margin = {
+    marginTop: '20px'
+}
 const imageStyle = {
     width: '300px',
     marginTop: '12%'
@@ -48,9 +51,6 @@ const HomePage = () => (
           contentp {
               contentp
           }
-          drawback {
-              drawback
-          }
         }
       }
     `}
@@ -61,8 +61,7 @@ const HomePage = () => (
         images,
         links,
         about: { about },
-        contentp: {contentp},
-        drawback: {drawback}
+        contentp: {contentp}
       }
     }) => (
       <>
@@ -84,7 +83,7 @@ const HomePage = () => (
           <a target="_blank" rel="noopener noreferrer" href={links.link4}>Gatsby</a><br />
           <a target="_blank" rel="noopener noreferrer" href={links.link3}>Contentful</a>
           </section>
-          <section>
+          <section style={margin}>
             <div>
               <img alt="CMS Comparison" src={images[2].file.url} />
             </div>
